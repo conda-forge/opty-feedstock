@@ -1,6 +1,6 @@
 {% set name = "opty" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "362a65e7b313d3a8fb403ae8148035c40c6078d1ca490b900b78a439110ff16e" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "aaf53d76054b0c3603575450d1f9dd9c7fc1f29f91a3338b86642ee5af5334c2" %}
 
 package:
   name: {{ name|lower }}
