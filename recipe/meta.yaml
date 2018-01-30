@@ -1,6 +1,6 @@
 {% set name = "opty" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "aaf53d76054b0c3603575450d1f9dd9c7fc1f29f91a3338b86642ee5af5334c2" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "9eb5a53e1ca173bbe08f3f4553f0b5b568f1da0cc7f784657be0021f1c73816e" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
     - python
     - numpy >=1.8.1
     - scipy >=0.14.1
-    - sympy >=0.7.6
+    - sympy >=1.0.0
     - cython >=0.20.1
     - cyipopt >=0.1.7
 
@@ -44,7 +44,7 @@ about:
   home: http://github.com/csu-hmc/opty
   license: BSD-2-Clause
   license_family: BSD
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: 'Tools for optimizing dynamic systems using direct collocation.'
   description: |
     opty utilizes symbolic descriptions of ordinary differential equations
