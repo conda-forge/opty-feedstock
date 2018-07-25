@@ -12,17 +12,19 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
   run:
     - python
-    - numpy >=1.8.1
+    - numpy
     - scipy >=0.14.1
     - sympy >=1.0.0
     - cython >=0.20.1
