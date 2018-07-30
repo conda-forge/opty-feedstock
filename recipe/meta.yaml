@@ -14,11 +14,9 @@ source:
 build:
   number: 2
   skip: True  # [win]
-  script: python -m pip install --no-deps --ignore-installed .  --verbose
-
+  script: python setup.py install --single-version-externally-managed --record record.txt
 requirements:
   build:
-    - pip
   host:
     - python
     - setuptools
