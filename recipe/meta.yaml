@@ -16,6 +16,8 @@ build:
   skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . -vv"
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - pip
     - python
