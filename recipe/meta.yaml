@@ -22,6 +22,7 @@ requirements:
     - setuptools
   run:
     - python
+    - setuptools
     - numpy >=1.8.1
     - scipy >=0.14.1
     - sympy >=1.0.0,<1.6
