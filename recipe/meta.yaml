@@ -21,13 +21,13 @@ requirements:
     - python
     - setuptools
   run:
-    - python
-    - setuptools
-    - numpy >=1.8.1
-    - scipy >=0.14.1
-    - sympy >=1.0.0,<1.6
-    - cython >=0.20.1
     - cyipopt >=0.1.7
+    - cython >=0.20.1
+    - numpy >=1.8.1
+    - python
+    - scipy >=0.14.1
+    - setuptools
+    - sympy >=1.0.0,<1.6
 
 test:
   imports:
@@ -42,6 +42,9 @@ test:
     - test_setup.py
   commands:
     - which python
+    # NOTE : Try to build a simple Cython extension. ufuncify_matrix() does not
+    # seem to print error info on this command with subprocess.call() and this
+    # sample gives better feedback until ufuncify_matrix() is improved.
     - python test_setup.py build_ext --inplace
     - python -c "from opty.tests.test_utils import test_ufuncify_matrix;test_ufuncify_matrix()"
     - python betts2003.py
