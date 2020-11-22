@@ -38,8 +38,9 @@ test:
   files:
     - betts2003.py
   commands:
-    - {{ PYTHON }} -c "from opty.tests.test_utils import test_ufuncify_matrix;test_ufuncify_matrix()"
-    - {{ PYTHON }} betts2003.py
+    - which python
+    - python -c "from opty.tests.test_utils import test_ufuncify_matrix;test_ufuncify_matrix()"
+    - python betts2003.py
 
 about:
   home: http://github.com/csu-hmc/opty
