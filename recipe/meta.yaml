@@ -37,8 +37,11 @@ test:
     - opty.tests
   files:
     - betts2003.py
+    - helloworld.pyx
+    - test_setup.py
   commands:
     - which python
+    - python test_setup.py build_ext --inplace
     - python -c "from opty.tests.test_utils import test_ufuncify_matrix;test_ufuncify_matrix()"
     - python betts2003.py
 
