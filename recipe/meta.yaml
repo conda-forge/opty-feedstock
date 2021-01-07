@@ -20,7 +20,8 @@ requirements:
     - python
     - setuptools
   run:
-    - cyipopt >=0.1.7
+    - cyipopt >=0.1.7  # [unix]
+    - cyipopt >=0.3.0  # [win]
     - cython >=0.20.1
     - numpy >=1.8.1
     - python
