@@ -42,7 +42,7 @@ test:
     - helloworld.pyx
     - test_setup.py
   commands:
-    - which python
+    - which python  # [unix]
     # NOTE : Try to build a simple Cython extension. ufuncify_matrix() does not
     # seem to print error info on this command with subprocess.call() and this
     # sample gives better feedback until ufuncify_matrix() is improved.
