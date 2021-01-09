@@ -48,7 +48,7 @@ test:
     # seem to print error info on this command with subprocess.call() and this
     # sample gives better feedback until ufuncify_matrix() is improved.
     - python test_setup.py build_ext --inplace
-    - python -c "from opty.tests.test_utils import test_ufuncify_matrix;test_ufuncify_matrix()"
+    - python -c "from opty.tests.test_utils import test_ufuncify_matrix;test_ufuncify_matrix()"  # [unix]
     - python betts2003.py
 
 about:
