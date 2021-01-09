@@ -1,6 +1,6 @@
 {% set name = "opty" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "9eb5a53e1ca173bbe08f3f4553f0b5b568f1da0cc7f784657be0021f1c73816e" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "2551437a546da4739448247c189c2a8c9b58da86409f0e73edea21b2d918d58f" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 requirements:
   host:
     - pip
@@ -25,10 +25,9 @@ requirements:
     - cython >=0.20.1
     - numpy >=1.8.1
     - python
-    - pywin32  # [win]
     - scipy >=0.14.1
     - setuptools
-    - sympy >=1.0.0,<1.6
+    - sympy >=1.0.0
 
 test:
   requires:
