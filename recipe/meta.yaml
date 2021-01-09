@@ -31,7 +31,7 @@ requirements:
 
 test:
   requires:
-    - {{ compiler('c') }}  # [linux]
+    - {{ compiler('c') }}
   imports:
     - opty
     - opty.direct_collocation
