@@ -1,6 +1,6 @@
 {% set name = "opty" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "9eb5a53e1ca173bbe08f3f4553f0b5b568f1da0cc7f784657be0021f1c73816e" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "2551437a546da4739448247c189c2a8c9b58da86409f0e73edea21b2d918d58f" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . -vv
 requirements:
   host:
     - pip
@@ -56,7 +56,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Tools for optimizing dynamic systems using direct collocation.'
+  summary: Tools for optimizing dynamic systems using direct collocation.
   description: |
     opty utilizes symbolic descriptions of ordinary differential equations
     expressed with SymPy to form the constraints needed to solve optimal
