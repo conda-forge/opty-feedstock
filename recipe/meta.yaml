@@ -1,6 +1,6 @@
 {% set name = "opty" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "2551437a546da4739448247c189c2a8c9b58da86409f0e73edea21b2d918d58f" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "f8223e2eab915f8ed4fbea2138527d959765e190b9b5c171f288fb1421414b67" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 requirements:
   host:
@@ -20,14 +20,13 @@ requirements:
     - python
     - setuptools
   run:
-    - cyipopt >=0.1.7  # [unix]
-    - cyipopt >=0.3.0  # [win]
-    - cython >=0.20.1
-    - numpy >=1.8.1
+    - cyipopt >=1.1.0
+    - cython >=0.29.19
+    - numpy >=1.19.0
     - python
-    - scipy >=0.14.1
+    - scipy >=1.5.0
     - setuptools
-    - sympy >=1.0.0
+    - sympy >=1.6.0
 
 test:
   requires:
@@ -58,17 +57,17 @@ about:
   license_file: LICENSE
   summary: Tools for optimizing dynamic systems using direct collocation.
   description: |
-    opty utilizes symbolic descriptions of ordinary differential equations
+    opty utilizes symbolic descriptions of differential algebraic equations
     expressed with SymPy to form the constraints needed to solve optimal
     control and parameter identification problems using the direct collocation
     method and non-linear programming. In general, if one can express the
-    continuous first order ordinary differential equations of the system as
+    continuous first order differential algebraic equations of the system as
     symbolic expressions opty will automatically generate a function to
     efficiently evaluate the dynamical constraints and a function that
     evaluates the sparse Jacobian of the constraints, which have been optimized
     for speed and memory consumption. The translation of the dynamical system
     description to the NLP form, primarily the formation of the constraints and
-    the Jabcobian of the constraints, manually is a time consuming and error
+    the Jacobian of the constraints, manually is a time consuming and error
     prone process. opty eliminates both of those issues.
   dev_url: http://github.com/csu-hmc/opty
 
