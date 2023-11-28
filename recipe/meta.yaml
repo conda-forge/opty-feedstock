@@ -1,6 +1,6 @@
 {% set name = "opty" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "2551437a546da4739448247c189c2a8c9b58da86409f0e73edea21b2d918d58f" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "f8223e2eab915f8ed4fbea2138527d959765e190b9b5c171f288fb1421414b67" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 requirements:
   host:
