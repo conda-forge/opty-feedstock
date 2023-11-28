@@ -11,17 +11,17 @@ Summary: Tools for optimizing dynamic systems using direct collocation.
 
 Development: http://github.com/csu-hmc/opty
 
-opty utilizes symbolic descriptions of ordinary differential equations
+opty utilizes symbolic descriptions of differential algebraic equations
 expressed with SymPy to form the constraints needed to solve optimal
 control and parameter identification problems using the direct collocation
 method and non-linear programming. In general, if one can express the
-continuous first order ordinary differential equations of the system as
+continuous first order differential algebraic equations of the system as
 symbolic expressions opty will automatically generate a function to
 efficiently evaluate the dynamical constraints and a function that
 evaluates the sparse Jacobian of the constraints, which have been optimized
 for speed and memory consumption. The translation of the dynamical system
 description to the NLP form, primarily the formation of the constraints and
-the Jabcobian of the constraints, manually is a time consuming and error
+the Jacobian of the constraints, manually is a time consuming and error
 prone process. opty eliminates both of those issues.
 
 
@@ -249,7 +249,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
