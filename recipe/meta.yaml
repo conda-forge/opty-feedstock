@@ -1,6 +1,6 @@
 {% set name = "opty" %}
-{% set version = "1.2.0" %}
-{% set sha256 = "f8223e2eab915f8ed4fbea2138527d959765e190b9b5c171f288fb1421414b67" %}
+{% set version = "1.3.0" %}
+{% set sha256 = "83081d4514264c4f3ab38ff877304422833d100bd0df7386f28696835fe78ee9" %}
 
 package:
   name: {{ name|lower }}
@@ -31,6 +31,7 @@ requirements:
 test:
   requires:
     - {{ compiler('c') }}
+    - pytest
   imports:
     - opty
     - opty.direct_collocation
@@ -55,12 +56,12 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: Tools for optimizing dynamic systems using direct collocation.
+  summary: Tool for optimizing dynamic systems using direct collocation.
   description: |
     opty utilizes symbolic descriptions of differential algebraic equations
     expressed with SymPy to form the constraints needed to solve optimal
     control and parameter identification problems using the direct collocation
-    method and non-linear programming. In general, if one can express the
+    method and non-linear programming (NLP). In general, if one can express the
     continuous first order differential algebraic equations of the system as
     symbolic expressions opty will automatically generate a function to
     efficiently evaluate the dynamical constraints and a function that
