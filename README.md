@@ -7,14 +7,14 @@ Home: http://github.com/csu-hmc/opty
 
 Package license: BSD-2-Clause
 
-Summary: Tools for optimizing dynamic systems using direct collocation.
+Summary: Tool for optimizing dynamic systems using direct collocation.
 
 Development: http://github.com/csu-hmc/opty
 
 opty utilizes symbolic descriptions of differential algebraic equations
 expressed with SymPy to form the constraints needed to solve optimal
 control and parameter identification problems using the direct collocation
-method and non-linear programming. In general, if one can express the
+method and non-linear programming (NLP). In general, if one can express the
 continuous first order differential algebraic equations of the system as
 symbolic expressions opty will automatically generate a function to
 efficiently evaluate the dynamical constraints and a function that
