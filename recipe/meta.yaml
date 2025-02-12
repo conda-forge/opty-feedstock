@@ -15,6 +15,9 @@ build:
   number: 1
   script: {{ PYTHON }} -m pip install --no-deps --no-build-isolatio -vv .
 requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
     - python
