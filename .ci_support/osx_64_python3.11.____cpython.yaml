@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '18'
+- '19'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -20,3 +20,6 @@ python:
 - 3.11.* *_cpython
 target_platform:
 - osx-64
+zip_keys:
+- - python
+  - channel_sources
