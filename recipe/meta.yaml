@@ -65,7 +65,7 @@ about:
   summary: Tool for optimizing dynamic systems using direct collocation.
   description: |
     opty utilizes symbolic descriptions of differential algebraic equations
-    expressed with SymPy_ to form the constraints needed to solve optimal
+    expressed with SymPy to form the constraints needed to solve optimal
     control and parameter identification problems using the direct collocation
     method and nonlinear programming (NLP). In general, if one can express the
     continuous first order differential algebraic equations of the system as
